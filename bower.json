@@ -1,0 +1,22 @@
+{
+  "name": "lunch",
+  "version": "0.1.0",
+  "homepage": "https://github.com/rek/where-is-lunch",
+  "authors": [
+    "rekarnar <rekarnar@gmail.com>"
+  ],
+  "description": "Where to go? What to do?",
+  "main": "index.html",
+  "license": "MIT",
+  "dependencies": {
+    "marionette": "2.4.2",
+    "lodash": "3.9.0",
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

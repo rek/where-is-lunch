@@ -5,6 +5,8 @@ var Marionette = require('backbone.marionette'),
 module.exports = Marionette.View.extend(ReactComponentView).extend({
   initialize: function(options) {
     this.ticket = options.model;
+
+    console.log('init');
   },
 
   getReactComponent: function() {

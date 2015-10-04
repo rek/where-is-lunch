@@ -16,10 +16,14 @@
 *
 */
 
+require('backbone.marionette');
+
 var React = require('react');
 
 module.exports = {
     onShow: function() {
+    	console.log('View showing', this);
+
         if (this._reactMountEl) {
             React.unmountComponentAtNode(this._reactMountEl);
         }

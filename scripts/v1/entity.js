@@ -4,6 +4,8 @@ require('jquery');
 
 var Backbone = require('backbone');
 
-var entity = new Backbone.Model();
+var entity = new Backbone.Model({
+	data: 'test'
+});
 
 module.exports = entity;

@@ -8,7 +8,7 @@ module.exports = {
 	},
 
 	js: {
-		files: 'scripts/*.js',
+		files: ['scripts/*.js', 'scripts/**/*.js'],
 		tasks: ['browserify'],
 	},
 
@@ -17,6 +17,7 @@ module.exports = {
 			'Gruntfile.js',
 			'grunt/*.js',
 			'scripts/*.js',
+			'scripts/**/*.js',
 			'index.html',
 		]
 	}

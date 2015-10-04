@@ -4,7 +4,7 @@ module.exports = {
 
 	dist: {
 		files: {
-			'build/app.js': ['scripts/*.js', 'bower_components/react/react.js']
+			'build/app.js': ['scripts/v1/*.js']
 		},
 	}
 

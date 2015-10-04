@@ -36,6 +36,5 @@ module.exports = {
 		if (this.isMounted()) {
 			this.forceUpdate();
 		}
-
 	},
 };

@@ -15,7 +15,8 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "grunt-browserify": "^4.0.1"
+    "grunt-browserify": "^4.0.1",
+    "jquery": "^2.1.4"
   },
   "devDependencies": {
     "grunt": "0.4.5",

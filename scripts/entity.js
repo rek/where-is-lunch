@@ -1,4 +1,4 @@
-require("../bower_components/jquery/dist/jquery");
+require("jquery");
 
 var Backbone = require("../bower_components/backbone/backbone");
 

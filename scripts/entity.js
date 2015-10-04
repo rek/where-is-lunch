@@ -1,6 +1,8 @@
-require("jquery");
+'use strict';
 
-var Backbone = require("../bower_components/backbone/backbone");
+require('jquery');
+
+var Backbone = require('backbone');
 
 var entity = new Backbone.Model();
 

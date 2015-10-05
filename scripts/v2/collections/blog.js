@@ -16,8 +16,6 @@
 
 var Backbone = require('backbone');
 
-module.exports = {
-    BlogCollection: Backbone.Collection.extend({
-        url: 'resources/blog'
-    })
-};
+module.exports = Backbone.Collection.extend({
+    url: 'resources/blog'
+});

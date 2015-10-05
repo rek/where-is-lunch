@@ -2,10 +2,13 @@
 
 module.exports = {
 	dist: {
-		files: {
-			cwd: 'out/v2',
+		files: [{
+			expand: true,
+			flatten: false,
+
+			cwd: 'scripts/v2',
 			src: ['**/*.js'],
-			dest: 'build/v2',
-		},
+			dest: 'out/v2',
+		}],
 	}
 };

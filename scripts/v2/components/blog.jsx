@@ -102,6 +102,4 @@ var BlogComponent = React.createClass({
   // return BlogComponent;
 // }));
 
-module.exports = {
-  BlogComponent: BlogComponent
-};
+module.exports = BlogComponent;

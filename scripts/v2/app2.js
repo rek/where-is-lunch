@@ -1,18 +1,16 @@
 'use strict';
 
 var React = require('react'),
-	// $ = require('jquery'),
-	componentAndData = require('../../build/v2/components/blog'),
-	BlogCollection = require('./collections/blog');
-
-console.log('componentAndDatacomponentAndDatacomponentAndData', componentAndData);
+	Backbone = require('backbone'),
+	BlogComponent = require('../../out/v2/components/blog'),
+	BlogCollection = require('../../out/v2/collections/blog');
 
 require('backbone-react-component');
 
-// $.get('build/components/blog.js', function (componentAndData) {
-	console.log('componentAndData', componentAndData);
-	document.body.innerHTML = componentAndData.component;
-	console.log('document.body.innerHTML', document.body.innerHTML);
-	var blogCollection = new BlogCollection(componentAndData.data);
-	React.renderComponent(BlogComponent({collection: blogCollection}), document.body);
-// });
+// document.body.innerHTML = componentAndData.component;
+
+// console.log('document.body.innerHTML', document.body.innerHTML);
+
+var blogCollection = new BlogCollection();
+
+React.render(React.createElement(BlogComponent), document.getElementById('data'), {collection: blogCollection}, document.body);

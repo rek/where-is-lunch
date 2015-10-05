@@ -2,9 +2,15 @@
 
 module.exports = {
 
-	dist: {
+	v1: {
 		files: {
-			'build/app.js': ['scripts/v1/*.js']
+			'build/app.js': ['out/v1/*.js']
+		},
+	},
+
+	v2: {
+		files: {
+			'build/app.js': ['out/v2/*.js']
 		},
 	}
 

@@ -30,7 +30,9 @@ module.exports = {
 
         this._reactMountEl = this.$el[0];
         var component = this.getReactComponent();
-        React.renderComponent(component, this._reactMountEl);
+
+        console.log('React', React);
+        React.constructAndRenderComponent(component, this._reactMountEl);
     },
 
     onClose: function() {

@@ -8,17 +8,29 @@ module.exports = {
 	},
 
 	js: {
-		files: ['scripts/*.js', 'scripts/**/*.js'],
-		tasks: ['browserify'],
+		files: ['out/*.js', 'out/**/*.js'],
+		tasks: ['browserify:v2'],
 	},
 
 	main: {
 		files: [
 			'Gruntfile.js',
 			'grunt/*.js',
-			'scripts/*.js',
-			'scripts/**/*.js',
+			'build/*.js',
 			'index.html',
 		]
-	}
+	},
+
+	copy: {
+		files: [
+			'scripts/v2/*.js',
+			'scripts/v2/**/*.js'
+		],
+		tasks: ['copy']
+	},
+
+	jsx: {
+		files: ['scripts/**/*.jsx'],
+		tasks: ['react'],
+	},
 };

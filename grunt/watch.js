@@ -18,7 +18,7 @@ module.exports = {
 			'grunt/*.js',
 			'build/*.js',
 			'index.html',
-		]
+		],
 	},
 
 	copy: {
@@ -26,11 +26,17 @@ module.exports = {
 			'scripts/v2/*.js',
 			'scripts/v2/**/*.js'
 		],
-		tasks: ['copy']
+		tasks: ['copy'],
+		options: {
+			livereload: false
+		},
 	},
 
 	jsx: {
 		files: ['scripts/**/*.jsx'],
 		tasks: ['react'],
+		options: {
+			livereload: false
+		},
 	},
 };

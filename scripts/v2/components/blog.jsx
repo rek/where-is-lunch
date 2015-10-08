@@ -1,6 +1,7 @@
 'use strict';
 
-// /** @jsx React.DOM */
+/** @jsx React.DOM */
+
 // (function (root, factory) {
 //   if (typeof module !== 'undefined') {
 //     var _ = require('underscore');
@@ -14,10 +15,11 @@ var React = require('react'),
 // }(this, function (_, Backbone, React, backboneMixin) {
 
 
-  // In a better implementation this would be splited into multiple components.
-  // Keeping this under one component for the sake of the example. Remember composition :)
+// In a better implementation this would be splited into multiple components.
+// Keeping this under one component for the sake of the example. Remember composition :)
 var BlogComponent = React.createClass({
 	mixins: [backboneMixin],
+
 	getInitialState: function () {
 	  return {
 		id: null,
@@ -25,6 +27,7 @@ var BlogComponent = React.createClass({
 		content: ''
 	  };
 	},
+
 	// Form rendering
 	createForm: function () {
 	  return (
@@ -37,6 +40,7 @@ var BlogComponent = React.createClass({
 		</form>
 	  );
 	},
+
 	// Post rendering
 	createPost: function (post) {
 	  return (
@@ -48,6 +52,7 @@ var BlogComponent = React.createClass({
 		</div>
 	  );
 	},
+
 	// Whenever an input changes, set it into this.state
 	handleChange: function (event) {
 	  var target = event.target;
@@ -56,6 +61,7 @@ var BlogComponent = React.createClass({
 	  nextState[key] = target.value;
 	  this.setState(nextState);
 	},
+
 	// Getting the id of the post that triggered the edit button and passing the
 	// respective model into this.state.
 	handleEdit: function (event) {
@@ -63,6 +69,7 @@ var BlogComponent = React.createClass({
 	  // By getting collection through this.state you get an hash of the collection
 	  this.setState(_.findWhere(this.state.collection, {id: id}));
 	},
+
 	// Getting the id of the post that triggered the remove button and destroying
 	// it (local and server).
 	handleRemove: function (event) {
@@ -71,6 +78,7 @@ var BlogComponent = React.createClass({
 	  var collection = this.getCollection();
 	  collection.get(id).destroy({wait: true});
 	},
+
 	// Save the new or existing post to the services
 	handleSubmit: function (event) {
 	  event.preventDefault();
@@ -88,6 +96,7 @@ var BlogComponent = React.createClass({
 	  // Set initial state
 	  this.replaceState(this.getInitialState());
 	},
+
 	// Go go react
 	render: function () {
 	  return (

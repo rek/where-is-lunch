@@ -7,4 +7,9 @@ module.exports = {
 		'watch'
 	],
 
+	'dev': [
+		'browserify:v2',
+		'run',
+	],
+
 };

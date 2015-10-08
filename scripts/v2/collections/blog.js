@@ -1,3 +1,5 @@
+'use strict';
+
 // (function(root, factory) {
 //     if (typeof module !== 'undefined') {
 //         var Backbone = require('backbone');
@@ -11,11 +13,22 @@
 //     return BlogCollection;
 // }));
 
-
-'use strict';
-
 var Backbone = require('backbone');
 
-module.exports = Backbone.Collection.extend({
-    url: 'resources/blog'
+var model = Backbone.Model.extend({
+	save: function() {
+		return this;
+	},
+
 });
+
+var collection = Backbone.Collection.extend({
+	url: 'resources/blog',
+	model: model,
+
+	save: function() {
+		return this;
+	},
+});
+
+module.exports = collection;

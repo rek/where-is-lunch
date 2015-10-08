@@ -60,6 +60,9 @@ var BlogComponent = React.createClass({
 		var key = target.getAttribute('name');
 		var nextState = {};
 		nextState[key] = target.value;
+
+		// console.log('nextState', nextState);
+
 		this.setState(nextState);
 	},
 
@@ -67,14 +70,19 @@ var BlogComponent = React.createClass({
 	// respective model into this.state.
 	handleEdit: function (event) {
 		var id = event.target.parentNode.getAttribute('data-id');
+
+		var newState = _.where(this.state.collection, {id: id});
+		// console.log('newState', newState);
+
 		// By getting collection through this.state you get an hash of the collection
-		this.setState(_.where(this.state.collection, {id: id}));
+		this.setState(newState[0]);
 	},
 
 	// Getting the id of the post that triggered the remove button and destroying
 	// it (local and server).
 	handleRemove: function (event) {
 		var id = event.target.parentNode.getAttribute('data-id');
+
 		// This is how you get the real Backbone.Collection instance
 		var collection = this.getCollection();
 		collection.get(id).destroy({wait: true});

@@ -8,6 +8,9 @@ module.exports = {
 	],
 
 	'dev': [
+		'clean',
+		'react',
+		'copy',
 		'browserify:v2',
 		'run',
 	],

@@ -21,6 +21,25 @@ var React = require('react'),
 var BlogComponent = React.createClass({
 	mixins: [backboneMixin],
 
+	// ------------------------------------------
+	// structure:
+	//
+	// propTypes: {},
+	// mixins : [],
+
+	// getInitialState: function() {},
+	// getDefaultProps: function() {},
+
+	// componentWillMount : function() {},
+	// componentWillReceiveProps: function() {},
+	// componentWillUnmount : function() {},
+
+	// _parseData : function() {},
+	// _onSelect : function() {},
+
+	// render : function() {}
+	// ------------------------------------------
+
 	getInitialState: function() {
 		return {
 			id: null,
